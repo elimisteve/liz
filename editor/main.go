@@ -1,13 +1,12 @@
-package main
+package editor
 
 import (
-	"fmt"
 	"io/ioutil"
 	"os"
 	"os/exec"
 )
 
-func main() {
+func Editor() string {
 	temp, _ := ioutil.TempFile("", "test")
 
 	cmd := exec.Command("vim", temp.Name())
@@ -16,7 +15,9 @@ func main() {
 	cmd.Stderr = os.Stderr
 	cmd.Run()
 
-	fmt.Println(ioutil.ReadFile(temp.Name()))
+	bytes, _ := ioutil.ReadFile(temp.Name())
 
 	os.Remove(temp.Name())
+
+	return string(bytes)
 }
