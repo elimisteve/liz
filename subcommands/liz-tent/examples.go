@@ -27,7 +27,7 @@ func createApp() *hawk.Credentials {
 		Types: tent.AppTypes{
 			Write: []string{"all"},
 		},
-		Scopes: []string{"permissions"},
+		Scopes:      []string{"permissions"},
 		RedirectURI: "http://127.0.0.1:8000/oauth",
 	})
 	err := client.CreatePost(post)
