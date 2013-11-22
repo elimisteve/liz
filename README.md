@@ -4,13 +4,15 @@ Just like programs should do one thing well, users should have one program for e
 
 ## Goal
 
-It should be easy to do all your text editing in a single editor. Writing email, making Tent posts and creating vCards should be as simple as `liz email`, `liz status` and `liz contact`.
+Make it easy to do all your text editing in your favourite editor.
 
 ## Components
 
 #### `liz` executable
 
 A wrapper meant to provide sane defaults for different tasks. The actual programs it calls may change somewhat frequently.
+
+The only command implemented so far is `liz status` to make a Tent status post. Examples of planned commands include `liz email` to write an email and `liz contact` to create a vcard.
 
 #### Other executables
 
