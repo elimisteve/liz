@@ -17,6 +17,6 @@ func main() {
 		cmd.Run()
 
 	} else {
-		fmt.Println("Available commands: \"status\"")
+		fmt.Println(`Available commands: "status"`)
 	}
 }
